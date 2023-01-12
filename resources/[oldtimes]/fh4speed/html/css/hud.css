@@ -67,10 +67,10 @@
 	margin-left: -10px;
 }
 .speeddisplay {
-	font-size: 94px;
+	font-size: 85px;
 	position: fixed;
-	bottom: 45px;
-	right: 90px;
+	bottom: 60px;
+	right: 78px;
 	font-family: 'Oswald-Light';
 	font-style: italic;
 	font-weight: 100;
@@ -98,30 +98,30 @@
 .unitdisplay {
 	position: fixed;
 	bottom: 198px;
-	right: 80px;
+	right: 84px;
 	color: rgba(255,255,255,0.6);
 	font-family: 'Oswald-Regular';
 	font-style: italic;
 	font-weight: 100;
-	font-size: 22px;
+	font-size: 19px;
 }
 .abs {
 	position: fixed;
 	bottom: 223px;
-	right: 293px;
+	right: 288px;
 	color: rgba(255,255,255,1);
 	font-family: 'Oswald-Regular';
 	font-style: normal;
 	font-weight: 100;
-	font-size: 18px;
+	font-size: 17px;
 }
 .handbrake {
 	position: fixed;
 	bottom: 198px;
-	right: 291px;
+	right: 286px;
 	color: rgba(255,255,255,1);
 	font-family: 'Oswald-Regular';
 	font-style: normal;
 	font-weight: 100;
-	font-size: 18px;
+	font-size: 17px;
 }
