@@ -1,21 +1,4 @@
-ESX = nil
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-
-------------------------- TUTO ---------------------------
-----------------------------------------------------------
-----------------------------------------------------------
-ESX.RegisterUsableItem('REPLACE THIS', function(source)
-	local xPlayer = ESX.GetPlayerFromId(source)
-	TriggerClientEvent('sp_clothes:REPLACE THIS', source)
-end)
-----------------------------------------------------------
-----------------------------------------------------------
-----------------------------------------------------------
-
-
-
-
+ESX = exports['es_extended']:getSharedObject()
 
 
 
