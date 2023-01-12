@@ -77,18 +77,35 @@ window.APP = {
       this.oldMessagesIndex = -1;
     },
     ON_SUGGESTION_ADD({ suggestion }) {
+      const duplicateSuggestion = this.backingSuggestions.find(a => a.name == suggestion.name);
+      if (duplicateSuggestion) {
+        if(suggestion.help || suggestion.params) {
+          duplicateSuggestion.help = suggestion.help || "";
+          duplicateSuggestion.params = suggestion.params || [];
+        }
+        return;
+      }
       if (!suggestion.params) {
         suggestion.params = []; //TODO Move somewhere else
       }
-      if (this.backingSuggestions.find(a => a.name == suggestion.name)) {
-        return;
+
+      if (this.removedSuggestions.find(a => a.name == suggestion.name)) {
+        console.log(this.removedSuggestions.indexOf(suggestion.name))
+        this.removedSuggestions.splice(this.removedSuggestions.indexOf(suggestion.name), 1)
       }
+
+      console.log('Adding Command Suggestion: ' + suggestion.name + ' ' + suggestion.help);
       this.backingSuggestions.push(suggestion);
     },
     ON_SUGGESTION_REMOVE({ name }) {
       if(this.removedSuggestions.indexOf(name) <= -1) {
         this.removedSuggestions.push(name);
       }
+    },
+    ON_COMMANDS_RESET() {
+      console.log('Resetting Command Suggestions');
+      this.removedSuggestions = [];
+      this.backingSuggestions = [];
     },
     ON_TEMPLATE_ADD({ template }) {
       if (this.templates[template.id]) {

@@ -9,7 +9,7 @@ RegisterNetEvent('chat:addMessage')
 RegisterNetEvent('chat:addSuggestion')
 RegisterNetEvent('chat:addSuggestions')
 RegisterNetEvent('chat:removeSuggestion')
-RegisterNetEvent('chat:clear')
+RegisterNetEvent('chat:client:ClearChat')
 
 -- internal events
 RegisterNetEvent('__cfx_internal:serverPrint')
@@ -26,7 +26,6 @@ AddEventHandler('chatMessage', function(author, color, text)
     type = 'ON_MESSAGE',
     message = {
       color = color,
-      multiline = true,
       args = args
     }
   })
@@ -39,7 +38,6 @@ AddEventHandler('__cfx_internal:serverPrint', function(msg)
     type = 'ON_MESSAGE',
     message = {
       templateId = 'print',
-      multiline = true,
       args = { msg }
     }
   })
@@ -79,6 +77,13 @@ AddEventHandler('chat:removeSuggestion', function(name)
   })
 end)
 
+RegisterNetEvent('chat:resetSuggestions')
+AddEventHandler('chat:resetSuggestions', function()
+  SendNUIMessage({
+    type = 'ON_COMMANDS_RESET'
+  })
+end)
+
 AddEventHandler('chat:addTemplate', function(id, html)
   SendNUIMessage({
     type = 'ON_TEMPLATE_ADD',
@@ -89,7 +94,7 @@ AddEventHandler('chat:addTemplate', function(id, html)
   })
 end)
 
-AddEventHandler('chat:clear', function(name)
+AddEventHandler('chat:client:ClearChat', function(name)
   SendNUIMessage({
     type = 'ON_CLEAR'
   })
@@ -229,11 +234,4 @@ Citizen.CreateThread(function()
       end
     end
   end
-end)
-
-Citizen.CreateThread(function()
-    TriggerEvent('chat:addSuggestion', '/olx')
-    TriggerEvent('chat:addSuggestion', '/ilegal')
-    TriggerEvent('chat:addSuggestion', '/192')
-    TriggerEvent('chat:addSuggestion', '/190')
 end)

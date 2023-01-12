@@ -4,16 +4,25 @@ window.CONFIG = {
   defaultTemplateId: 'default', //This is the default template for 2 args1
   defaultAltTemplateId: 'defaultAlt', //This one for 1 arg
   templates: { //You can add static templates here
-    'default': '<b>{0}</b> {1}',
+    'default': '<div class="chat-message">OOC {0}: {1}</div>',
     'defaultAlt': '{0}',
     'print': '<pre>{0}</pre>',
     'example:important': '<h1>^2{0}</h1>'
   },
-  fadeTimeout: 1800,
-  suggestionLimit: 9,
+  fadeTimeout: 2500,
+  suggestionLimit: 5,
   style: {
-    background: 'rgba(52, 73, 94, 0.1)',
+    background: 'transparent',
     width: '38%',
     height: '22%',
   }
 };
+
+/*
+  style: {
+    background: 'rgba(255, 93, 0, 0.62)',
+    border: '1px solid #000000',
+    width: '38%',
+    height: '22%',
+  }
+*/
