@@ -1,1 +1,16 @@
 cache/
+resources/[Mapping]/*
+resources/[Load]/*
+resources/\[Load\]/oldtimes_haine/
+resources/\[Load\]/oldtimes_masini/
+*.ymap
+*.ymf
+*.ycd
+*.ytd
+*.ytyp
+*.ydr
+*.ybn
+*.ydd
+*.yft
+*.ynv
+resources/\[Mapping\]/oldtimes_cars/

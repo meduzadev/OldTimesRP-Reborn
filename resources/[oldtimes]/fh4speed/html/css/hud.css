@@ -42,11 +42,11 @@
 	filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.6));
 }
 .speedcircle {
-	width: 80px;
-	height: 80px;
+	width: 0px;
+	height: 0px;
 	position: fixed;
-	bottom: 185px;
-	right: 185px;
+	bottom: 173px;
+	right: 151px;
 }
 .geardisplay {
 	text-align: center;
@@ -55,8 +55,8 @@
 	width: 37px;
 	height: 37px;
 	position: fixed;
-	bottom: 193px;
-	right: 193px;
+	bottom: 145px;
+	right: 33px;
 	color: rgb(63,249,165);
 	border: 3px solid rgb(63,249,165);
 	border-radius: 50%;
@@ -69,11 +69,11 @@
 .speeddisplay {
 	font-size: 85px;
 	position: fixed;
-	bottom: 60px;
-	right: 78px;
+	bottom: 65px;
+	right: 25px;
 	font-family: 'Oswald-Light';
 	font-style: italic;
-	font-weight: 100;
+	font-weight: 200;
 	color: #FFF;
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
 }
@@ -82,23 +82,23 @@
 }
 .int1 {
 	position: fixed;
-	bottom: 50px;
-	right: 200px;
+	bottom: 40px;
+	right: 180px;
 }
 .int2 {
 	position: fixed;
-	bottom: 50px;
-	right: 140px;
+	bottom: 40px;
+	right: 120px;
 }
 .int3 {
 	position: fixed;
-	bottom: 50px;
-	right: 80px;
+	bottom: 40px;
+	right: 60px;
 }
 .unitdisplay {
 	position: fixed;
-	bottom: 198px;
-	right: 84px;
+	bottom: 188px;
+	right: 34px;
 	color: rgba(255,255,255,0.6);
 	font-family: 'Oswald-Regular';
 	font-style: italic;
@@ -108,7 +108,7 @@
 .abs {
 	position: fixed;
 	bottom: 223px;
-	right: 288px;
+	right: 318px;
 	color: rgba(255,255,255,1);
 	font-family: 'Oswald-Regular';
 	font-style: normal;
@@ -118,7 +118,7 @@
 .handbrake {
 	position: fixed;
 	bottom: 198px;
-	right: 286px;
+	right: 316px;
 	color: rgba(255,255,255,1);
 	font-family: 'Oswald-Regular';
 	font-style: normal;
