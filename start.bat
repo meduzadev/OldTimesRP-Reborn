@@ -1,0 +1,1 @@
+C:\Users\Administrator\Desktop\ServerTeste\artifacts\FXServer.exe +exec server.cfg
