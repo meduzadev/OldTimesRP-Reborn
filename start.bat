@@ -1,1 +1,1 @@
-C:\Users\Administrator\Desktop\ServerTeste\artifacts\FXServer.exe +exec server.cfg
+C:\Users\Administrator\Desktop\ServerTeste\OldTimesRP-Reborn\artifacts\FXServer.exe +exec server.cfg
